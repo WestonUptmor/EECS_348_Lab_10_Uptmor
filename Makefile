@@ -1,12 +1,14 @@
 CXX      = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -g
-TARGET   = Lab5
-SRC      = Lab_5.cpp
+CXXFLAGS = -std=c++11 -Wall -Wextra -g
+TARGET   = Lab10
+SRC      = Lab_10.cpp
+
+all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
 	rm -f $(TARGET)
 
-.PHONY: clean
+.PHONY: all clean
